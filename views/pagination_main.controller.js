@@ -64,7 +64,7 @@ sap.ui.controller("pagination.views.pagination_main", {
   },
 
   pageclick: function() {
-    var btnnum = $(this).text(); 
+    var btnnum = this.getText(); 
     if (btnnum === "1") {
       console.log("First page");
     };

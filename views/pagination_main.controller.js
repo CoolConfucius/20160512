@@ -65,27 +65,28 @@ sap.ui.controller("pagination.views.pagination_main", {
   },
 
   paginationrender: function(){
-    var $pages = $("<div>")
-    for (var i = 1; i <= obj.pagesint; i++) {
-      // var $page = $("<div>");
-      var $page = new sap.m.Button({
-        // text: i.toString()
-        icon: "sap-icon://home"
-      });
-      // $page.addClass("btn btn-success pagebtn");
-      // $page.text(i.toString());
-      // if (i !== 1 && i !== obj.pagesint && i !== currentpage) {
-      //   if (i !== currentpage - 1 && i !== ) {};
-      //   $page.hide(); 
-      // };
-      // $pages.append($page);
-      this.pagination.push($page);
-    };
+    // var $pages = $("<div>")
+    // for (var i = 1; i <= obj.pagesint; i++) {
+    //   // var $page = $("<div>");
+    //   var $page = new sap.m.Label({
+    //     text: i.toString()
+    //     // icon: "sap-icon://home"
+    //   });
+    //   // $page.addClass("btn btn-success pagebtn");
+    //   // $page.text(i.toString());
+    //   // if (i !== 1 && i !== obj.pagesint && i !== currentpage) {
+    //   //   if (i !== currentpage - 1 && i !== ) {};
+    //   //   $page.hide(); 
+    //   // };
+    //   // $pages.append($page);
+    //   this.pagination.push($page);
+    // };
     // var $pageinput = $("<input>"); 
     // $pageinput.attr("id", "pageinput");
     // var $pageinputgo = $("<div>"); 
     // $pageinputgo.attr("id", "pageinputgo").addClass("btn btn-success").text("Go");
     // $('#content').append($pages, $pageinput, $pageinputgo);
+    this.pagination[0].setText("Hell World");
     console.log("Here?");
   },
 

@@ -40,22 +40,7 @@ sap.ui.jsview("pagination.views.pagination_main", {
       contentRight: [filterBtn]
     }).addStyleClass("as-app-header");
 
-
-    // PAGINATION
-    // var pagination = [new sap.m.Label({
-    //   text: "test"
-    // })];
-
-    // var pagination = new sap.m.Label({
-    //   text: "test"
-    // })
-
-    // oController.pagination = pagination; 
-
-    var paginationHeader = new sap.m.Bar(this.createId("pagination-headerBar"), {
-      // contentLeft: pagination
-      //contentLeft: [pagination]
-    });
+    var paginationHeader = new sap.m.Bar(this.createId("pagination-headerBar"), {});
     oController.paginationHeader = paginationHeader; 
 
     // CONTENT TABLE 

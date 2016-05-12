@@ -54,20 +54,24 @@ sap.ui.controller("pagination.views.pagination_main", {
 
   paginationrender: function(){
     for (var i = 1; i <= obj.pagesint; i++) {
-      // console.log(i.toString());
-      var $page = new sap.m.Label({
-        // text: i.toString() 
-        text: "test1"     
+      var $page = new sap.m.Button({
+        text: i.toString(),
+        press: this.pageclick
       });
-      
-      // this.pagination.push($page);
+    
       this.paginationHeader.addContentLeft($page);
     };
-
-    console.log("this pagination", this.pagination);
   },
 
   pageclick: function() {
-
+    var btnnum = $(this).text(); 
+    if (btnnum === "1") {
+      console.log("First page");
+    };
+    if (btnnum === obj.pagesint.toString()) {
+      console.log("Last page");
+    };
+    currentpage = btnnum; 
+    console.log(currentpage); 
   }
 })

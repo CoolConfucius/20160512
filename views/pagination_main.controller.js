@@ -66,9 +66,10 @@ sap.ui.controller("pagination.views.pagination_main", {
 
   paginationrender: function(){
     // var $pages = $("<div>")
+    var temparray = []; 
     for (var i = 1; i <= obj.pagesint; i++) {
       // var $page = $("<div>");
-      console.log(i.toString());
+      // console.log(i.toString());
       var $page = new sap.m.Label({
         text: i.toString()
         // icon: "sap-icon://home"
@@ -80,14 +81,16 @@ sap.ui.controller("pagination.views.pagination_main", {
       //   $page.hide(); 
       // };
       // $pages.append($page);
-      this.pagination[i] = $page;
+      // this.pagination.push($page);
+      temparray.push($page);
     };
+    this.pagination = temparray; 
     // var $pageinput = $("<input>"); 
     // $pageinput.attr("id", "pageinput");
     // var $pageinputgo = $("<div>"); 
     // $pageinputgo.attr("id", "pageinputgo").addClass("btn btn-success").text("Go");
     // $('#content').append($pages, $pageinput, $pageinputgo);
-    console.log("Here?", this.pagination);
+    console.log("this pagination", this.pagination);
   },
 
   pageclick: function() {

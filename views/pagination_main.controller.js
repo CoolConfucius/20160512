@@ -39,7 +39,7 @@ sap.ui.controller("pagination.views.pagination_main", {
     // this.fillTable();
     // this.deviceLinkedAccounts(); 
     // this.pagination[0].setText("Hell world")
-    this.pagination();
+    this.paginationrender();
     // display();
     console.log(obj);
 
@@ -64,7 +64,7 @@ sap.ui.controller("pagination.views.pagination_main", {
     $('#content').append($table);
   },
 
-  pagination: function(){
+  paginationrender: function(){
     var $pages = $("<div>")
     for (var i = 1; i <= obj.pagesint; i++) {
       var $page = $("<div>");

@@ -24,7 +24,7 @@ while (datacursor < data.length){
   page++; 
 }
 obj.pagesint = page - 1; 
-  
+
 sap.ui.controller("pagination.views.pagination_main", {
   
   //bus : sap.ui.getCore().getEventBus(),
@@ -39,7 +39,8 @@ sap.ui.controller("pagination.views.pagination_main", {
     // this.fillTable();
     // this.deviceLinkedAccounts(); 
     // this.pagination[0].setText("Hell world")
-
+    pagination();
+    // display();
     console.log(obj);
 
   },
@@ -51,6 +52,28 @@ sap.ui.controller("pagination.views.pagination_main", {
   onAfterRendering: function() {
 
   }, 
+
+  function pagination(){
+    var $pages = $("<div>")
+    for (var i = 1; i <= obj.pagesint; i++) {
+      var $page = $("<div>");
+      $page.addClass("btn btn-success pagebtn");
+      $page.text(i.toString());
+      // if (i !== 1 && i !== obj.pagesint && i !== currentpage) {
+      //   if (i !== currentpage - 1 && i !== ) {};
+      //   $page.hide(); 
+      // };
+      $pages.append($page);
+    };
+    var $pageinput = $("<input>"); 
+    $pageinput.attr("id", "pageinput");
+    var $pageinputgo = $("<div>"); 
+    $pageinputgo.attr("id", "pageinputgo").addClass("btn btn-success").text("Go");
+    $('#content').append($pages, $pageinput, $pageinputgo);
+  }
+
+
+
 
   numberOfAccounts: 0,
 

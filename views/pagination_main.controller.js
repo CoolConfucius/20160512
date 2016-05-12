@@ -1,6 +1,36 @@
+var obj = {};
+var data = []; 
+var currentpage = 1; 
+for (var i = 0; i < 100; i++) {
+  data.push(i.toString()); 
+};
+// ajax
+
+obj = {
+  pagesint: 1,
+  all: data
+}
+var datacursor = 0; 
+var page = 1; 
+while (datacursor < data.length){
+  obj[page.toString()] = [];
+  // 100 instead of 10 for records
+  for (var i = 0; i < 10; i++) {
+    if (datacursor < data.length) {   
+      obj[page.toString()].push(data[datacursor]);
+      datacursor++; 
+    };
+  };
+  page++; 
+}
+obj.pagesint = page - 1; 
+  
 sap.ui.controller("pagination.views.pagination_main", {
   
   //bus : sap.ui.getCore().getEventBus(),
+
+
+
 
   onInit: function() {
     console.log("on init main controller");
@@ -8,7 +38,10 @@ sap.ui.controller("pagination.views.pagination_main", {
     // this.accCount();
     // this.fillTable();
     // this.deviceLinkedAccounts(); 
-    this.pagination[0].setText("Hell world")
+    // this.pagination[0].setText("Hell world")
+
+    console.log(obj);
+
   },
 
   // _handleRouteMatched:function(evt){

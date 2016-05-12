@@ -8,6 +8,7 @@ sap.ui.controller("pagination.views.pagination_main", {
     // this.accCount();
     // this.fillTable();
     // this.deviceLinkedAccounts(); 
+    this.pagination[0].setText("Hell world")
   },
 
   // _handleRouteMatched:function(evt){

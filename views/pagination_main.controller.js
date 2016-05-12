@@ -39,7 +39,7 @@ sap.ui.controller("pagination.views.pagination_main", {
     // this.fillTable();
     // this.deviceLinkedAccounts(); 
     // this.pagination[0].setText("Hell world")
-    pagination();
+    this.pagination();
     // display();
     console.log(obj);
 
@@ -53,7 +53,18 @@ sap.ui.controller("pagination.views.pagination_main", {
 
   }, 
 
-  function pagination(){
+  display: function() {
+    $('.table').remove(); 
+    var $table = $("<div>"); 
+    $table.addClass("table"); 
+    for (var i = 0; i < obj[currentpage.toString()].length; i++) {
+      var $item = $("<div>").text(obj[currentpage.toString()][i].toString());
+      $table.append($item);
+    };
+    $('#content').append($table);
+  },
+
+  pagination: function(){
     var $pages = $("<div>")
     for (var i = 1; i <= obj.pagesint; i++) {
       var $page = $("<div>");
@@ -70,7 +81,20 @@ sap.ui.controller("pagination.views.pagination_main", {
     var $pageinputgo = $("<div>"); 
     $pageinputgo.attr("id", "pageinputgo").addClass("btn btn-success").text("Go");
     $('#content').append($pages, $pageinput, $pageinputgo);
-  }
+  },
+
+  pageclick: function() {
+    var btnnum = $(this).text(); 
+    if (btnnum === "1") {
+      console.log("First page");
+    };
+    if (btnnum === obj.pagesint.toString()) {
+      console.log("Last page");
+    };
+    currentpage = btnnum; 
+    console.log(currentpage);
+    display(); 
+  },
 
 
 

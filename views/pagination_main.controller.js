@@ -65,12 +65,12 @@ sap.ui.controller("pagination.views.pagination_main", {
 
   pageclick: function() {
     var btnnum = this.getText(); 
-    if (btnnum === "1") {
-      console.log("First page");
-    };
-    if (btnnum === obj.pagesint.toString()) {
-      console.log("Last page");
-    };
+    // if (btnnum === "1") {
+    //   console.log("First page");
+    // };
+    // if (btnnum === obj.pagesint.toString()) {
+    //   console.log("Last page");
+    // };
     currentpage = btnnum; 
     console.log(currentpage); 
   }

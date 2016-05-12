@@ -43,12 +43,25 @@ sap.ui.jsview("pagination.views.pagination_main", {
     var paginationHeader = new sap.m.Bar(this.createId("pagination-headerBar"), {});
     oController.paginationHeader = paginationHeader; 
 
-    // CONTENT TABLE 
 
+    // CONTENT TABLE 
+    var contentTable = new sap.m.Table({
+      // mode: sap.m.ListMode.MultiSelect,
+      // growing: false,
+      // columns : [
+      //   new sap.m.Column({
+      //     hAlign : "Center",
+      //     header : new sap.m.Label({
+      //       text: "Content: "
+      //     })
+      //   })
+      // ]
+    });
+    
 
     var oPage = new sap.m.Page({
       customHeader: appHeader, 
-      content: [paginationHeader]
+      content: [paginationHeader, contentTable]
     })
 
     return oPage; 

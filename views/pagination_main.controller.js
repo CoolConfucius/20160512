@@ -5,8 +5,8 @@ sap.ui.controller("pagination.views.pagination_main", {
   onInit: function() {
     console.log("on init main controller");
     this.app = sap.ui.getCore().byId("pagination-app");
-    this.accCount();
-    this.fillTable();
+    // this.accCount();
+    // this.fillTable();
     // this.deviceLinkedAccounts(); 
   },
 

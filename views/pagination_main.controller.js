@@ -60,7 +60,8 @@ sap.ui.controller("pagination.views.pagination_main", {
         text: "test1"     
       });
       
-      this.pagination.push($page);
+      // this.pagination.push($page);
+      this.paginationHeader.addContentLeft($page);
     };
 
     console.log("this pagination", this.pagination);

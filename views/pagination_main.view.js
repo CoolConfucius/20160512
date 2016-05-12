@@ -50,7 +50,7 @@ sap.ui.jsview("pagination.views.pagination_main", {
     //   text: "test"
     // })
 
-    oController.pagination = pagination; 
+    // oController.pagination = pagination; 
 
     var paginationHeader = new sap.m.Bar(this.createId("pagination-headerBar"), {
       // contentLeft: pagination

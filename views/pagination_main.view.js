@@ -48,16 +48,16 @@ sap.ui.jsview("pagination.views.pagination_main", {
     var contentTable = new sap.m.Table({
       // mode: sap.m.ListMode.MultiSelect,
       // growing: false,
-      // columns : [
-      //   new sap.m.Column({
-      //     hAlign : "Center",
-      //     header : new sap.m.Label({
-      //       text: "Content: "
-      //     })
-      //   })
-      // ]
+      columns : [
+        new sap.m.Column({
+          hAlign : "Center",
+          header : new sap.m.Label({
+            text: "Content: "
+          })
+        })
+      ]
     });
-    
+    oController.contentTable = contentTable;     
 
     var oPage = new sap.m.Page({
       customHeader: appHeader, 

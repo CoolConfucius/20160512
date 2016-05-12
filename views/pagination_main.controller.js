@@ -49,7 +49,7 @@ sap.ui.controller("pagination.views.pagination_main", {
   }, 
 
   display: function() {
-
+    this.contentTable.removeAllColumns(); 
   },
 
   paginationrender: function(){
@@ -61,6 +61,7 @@ sap.ui.controller("pagination.views.pagination_main", {
     
       this.paginationHeader.addContentLeft($page);
     };
+    this.display(); 
   },
 
   pageclick: function() {
@@ -73,5 +74,6 @@ sap.ui.controller("pagination.views.pagination_main", {
     // };
     currentpage = btnnum; 
     console.log(currentpage); 
+    this.display(); 
   }
 })

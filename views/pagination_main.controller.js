@@ -69,7 +69,8 @@ sap.ui.controller("pagination.views.pagination_main", {
     for (var i = 1; i <= obj.pagesint; i++) {
       // var $page = $("<div>");
       var $page = new sap.m.Button({
-        text: i.toString()
+        // text: i.toString()
+        icon: "sap-icon://home"
       });
       // $page.addClass("btn btn-success pagebtn");
       // $page.text(i.toString());
@@ -85,6 +86,7 @@ sap.ui.controller("pagination.views.pagination_main", {
     // var $pageinputgo = $("<div>"); 
     // $pageinputgo.attr("id", "pageinputgo").addClass("btn btn-success").text("Go");
     // $('#content').append($pages, $pageinput, $pageinputgo);
+    console.log("Here?");
   },
 
   pageclick: function() {
